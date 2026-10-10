@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    Mverve - Create Your Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-a" aria-hidden="true"></div>
+  <div class="glow glow-b" aria-hidden="true"></div>
+
+  <main class="card">
+    <header class="head">
+      <div class="brand">
+        <span>Mverve</span>
+      </div>
+      <h1>Create your profile</h1>
+      <p class="sub">Set up your account in under a minute. Every field is required.</p>
+    </header>
+
+    <div class="progress" aria-live="polite">
+      <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
+      <span id="progress-text">0 of 6 fields complete</span>
+    </div>
+
+    <form id="form" novalidate>
+      <div class="grid">
+
+        <div class="field full">
+          <label for="name">Full name</label>
+          <div class="control">
+            <input id="name" type="text" placeholder="e.g. Greeshma Ande" autocomplete="name" maxlength="50" aria-describedby="name-error">
+            <span class="count" id="name-count">0/50</span>
+          </div>
+          <p class="error" id="name-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <div class="control">
+            <input id="email" type="email" placeholder="you@example.com" autocomplete="email" aria-describedby="email-error">
+          </div>
+          <p class="error" id="email-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="mobile">Mobile number</label>
+          <div class="control">
+            <input id="mobile" type="tel" inputmode="numeric" placeholder="10-digit number" autocomplete="tel-national" aria-describedby="mobile-error">
+          </div>
+          <p class="error" id="mobile-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="age">Age</label>
+          <div class="control">
+            <input id="age" type="text" inputmode="numeric" placeholder="18 to 100" autocomplete="off" aria-describedby="age-error">
+          </div>
+          <p class="error" id="age-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="control">
+            <input id="password" type="password" placeholder="Create a password" autocomplete="new-password" aria-describedby="password-error">
+            <button type="button" class="toggle" data-target="password" aria-label="Show password" aria-pressed="false">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><line class="slash" x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+          </div>
+          <div class="meter" id="meter" data-level="0" aria-hidden="true"><span></span><span></span><span></span></div>
+          <p class="meter-label" id="meter-label"></p>
+          <p class="error" id="password-error" aria-live="polite"></p>
+        </div>
+
+        <div class="field">
+          <label for="confirm">Confirm password</label>
+          <div class="control">
+            <input id="confirm" type="password" placeholder="Re-enter your password" autocomplete="new-password" aria-describedby="confirm-error">
+            <button type="button" class="toggle" data-target="confirm" aria-label="Show confirm password" aria-pressed="false">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M1.5 12S5.5 5 12 5s10.5 7 10.5 7-4 7-10.5 7S1.5 12 1.5 12z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><line class="slash" x1="4" y1="20" x2="20" y2="4" stroke="currentColor" stroke-width="1.8"/></svg>
+            </button>
+          </div>
+          <p class="error" id="confirm-error" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button type="button" class="btn ghost" id="reset-btn">Reset form</button>
+        <button type="submit" class="btn primary" id="submit-btn">Create profile</button>
+      </div>
+    </form>
+
+    <section class="success" id="success" hidden tabindex="-1">
+      <svg viewBox="0 0 52 52" width="72" height="72" aria-hidden="true">
+        <circle class="ring" cx="26" cy="26" r="24" fill="none" stroke-width="3"/>
+        <path class="tick" d="M15 27l8 8 15-17" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <h2>Success! Your profile has been created.</h2>
+      <P>welcome to nerve.</P>
+      <button type="button" class="btn ghost" id="again-btn">Create another profile</button>
+    </section>
+
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
